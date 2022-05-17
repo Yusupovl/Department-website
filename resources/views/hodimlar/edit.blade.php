@@ -8,7 +8,7 @@ Hodimlar panel
 
 <h1 class="h3 mb-4 text-gray-800">Hodimlar qo'shish formasi</h1>
 
-<form action="{{route('hodimlar.update', [$hodim->id])}}" method="post">
+<form action="{{route('hodimlar.update', [$hodim->id])}}" method="post" enctype="multipart/form-data">
     @csrf
     @method('put')
 

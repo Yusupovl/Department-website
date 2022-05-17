@@ -53,6 +53,14 @@ return [
             'throw' => false,
         ],
 
+        'fan' => [
+            'driver' => 'local',
+            'root' => storage_path('app/fan'),
+            'url' => env('APP_URL') . '/fan',
+            'visibility' => 'public',
+            'throw' => false,
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),
@@ -81,6 +89,7 @@ return [
     'links' => [
         public_path('storage') => storage_path('app/public'),
         public_path('talaba') => storage_path('app/talaba'),
+        public_path('fan') => storage_path('app/fan'),
     ],
 
 ];

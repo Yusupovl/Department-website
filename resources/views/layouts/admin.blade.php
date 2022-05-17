@@ -35,16 +35,19 @@
                 </div>
                 <div class="sidebar-brand-text mx-3">
                     Admin Panel
+                    {{Auth::user()->name}}
                 </div>
             </a>
+
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
+
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
                 <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <i style="font-size:18px;" class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
 
@@ -59,14 +62,26 @@
             <!-- Nav Item - Charts -->
             <li class="nav-item">
                 <a class="nav-link" href="{{route('hodimlar.index')}}">
-                    <i class="fa-solid fa-user-tie"></i>
+                    <i style="font-size:18px;" class="fa-solid fa-user-tie"></i>
                     <span>Hodimlar</span></a>
             </li>
 
             <li class="nav-item">
                 <a class="nav-link" href="{{route('talabalar.index')}}">
-                    <i class="fa-solid fa-user-graduate"></i>
+                    <i style="font-size:18px;" class="fa-solid fa-user-graduate"></i>
                     <span>Talabalar</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('fanlar.index')}}">
+                    <i style="font-size:18px;" class="fas fa-thin fa-book"></i>
+                    <span>Fanlar</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('maqolalar.index')}}">
+                    <i style="font-size:18px;" class="fa-solid fa-newspaper"></i>
+                    <span>Maqolalar</span></a>
             </li>
 
             <!-- Nav Item - Pages Collapse Menu 
@@ -286,10 +301,15 @@
                                     Activity Log
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
+                                    {{ __('Logout') }}
                                 </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
                             </div>
                         </li>
 
@@ -313,7 +333,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>Copyright &copy; Your Website 2022</span>
                     </div>
                 </div>
             </footer>
