@@ -19,7 +19,7 @@
     <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
         For more information about DataTables, please visit the <a target="_blank" href="https://datatables.net">official DataTables documentation</a>.</p>
 
-    <a href="{{route('hodimlar.create')}}">Yangi hodim qo'shish</a>
+    <a href="{{route('hodimlar.create')}}">Yangi hodim qo'shish</a><br>
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
@@ -55,7 +55,7 @@
                             <td>{{$h->lavozim}}</td>
                             <td>{{$h->email}}</td>
                             <td>{{$h->tel_raqam}}</td>
-                            <td><img src="{{$h->rasm}}" width="50" height="50" alt=""></td>
+                            <td><img src="talaba/{{$h->rasm}}" width="50" height="50" alt=""></td>
                             <td>
                                 <a href="{{route('hodimlar.show', [$h->id])}}">Full</a>
                                 <a href="{{route('hodimlar.edit', [$h->id])}}"><i class="fa-solid fa-pen-to-square"></i></a>
@@ -68,6 +68,7 @@
             </div>
         </div>
     </div>
+
 
 
 

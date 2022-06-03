@@ -130,6 +130,8 @@ class IqtidorliTalabalarController extends Controller
             #$path = $filemodel->storeAs('public/images', $fileNameToStore);
         }
 
+    
+
 
         $talabalar->ism = $data['ism'];
         $talabalar->familya = $data['familya'];

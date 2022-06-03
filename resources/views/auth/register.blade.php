@@ -10,12 +10,11 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
-
-
                         <select name="hodim" id="">
-
                             @foreach ($hlist as $id=>$fio)
+                            @if($id != 1)
                             <option value="{{$id}}">{{$fio}}</option>
+                            @endif
                             @endforeach
                         </select>
                         @error('email')

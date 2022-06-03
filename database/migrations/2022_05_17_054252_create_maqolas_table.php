@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('nomi');
             $table->string('file');
             $table->string('turi');
-            $table->string('yili');
+            $table->string('yili')->nullable();
             $table->string('link');
             $table->timestamps();
         });

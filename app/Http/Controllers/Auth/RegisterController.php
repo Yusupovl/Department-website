@@ -7,6 +7,7 @@ use App\Models\Hodimlar;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
@@ -77,7 +78,9 @@ class RegisterController extends Controller
 
     public function showRegistrationForm()
     {
-        $hlist = Hodimlar::all()->pluck('familya', 'id');
-        return view('auth.register', compact('hlist'));
+        if ((Auth::id() === 1)) {
+            $hlist = Hodimlar::all()->pluck('familya', 'id');
+            return view('auth.register', compact('hlist'));
+        } else return "error";
     }
 }

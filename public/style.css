@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@400;500;600;700;800;900&display=swap');
+
+
+* {
+    font-family: 'Rokkitt', serif;
+}
+
+.navbar {
+    background-color: #c6edff;
+}
+
+.navbar span {
+    color: #0295da;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.navbar-name {
+    color: white;
+    background-color: #0295da;
+}
+
+.navbar-name span {
+    color: white;
+    font-family: 500;
+    font-size: 34px;
+}
+
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-inner {
+    width: 100%;
+    height: 550px;
+}
+
+.navbar-2 {
+    background-color: #0295da;
+    color: #fff;
+}
+
+.navbar-2 a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.dropdown-item {
+    background-color: #c6edff;
+}
+
+.img4 {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #0295da;
+}
+
+.height {
+    height: 300vh;
+}
+
+.footer {
+    background-color: #0295da;
+    color: #fff;
+    font-weight: 400;
+}
+
+.footer a {
+    color: #fff;
+}
